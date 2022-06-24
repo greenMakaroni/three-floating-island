@@ -1,0 +1,141 @@
+.text-div {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 7vw;
+    font-size: 4rem;
+}
+
+.landingHeader {
+    margin: 15vh 0 1vh 0;
+    font-family: 'Parisienne', cursive;
+    font-weight: bolder;
+    color: rgb(255, 255, 255, 0);
+    user-select: none;
+    transition: 0.1s;
+    font-size: 4rem;
+    animation: headerIn 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.landingParagraph {
+    margin: 8vh 0 0 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
+    color: rgb(240, 124, 241, 0);
+    user-select: none;
+    animation: pIn 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.landingCTO {
+    position: absolute;
+    border-style: none;
+    bottom: 15vh;
+    left: 45vw;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    color: rgb(255, 255, 255, 0);
+    border-radius: 0 20px 0 20px;
+    background: rgba(254,150,255, 0);
+    z-index: 2;
+    user-select: none;
+    animation-name: CTOIn;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+.landingCTO:hover {
+    cursor: pointer;
+    animation-name: CTOIn, whitePulse;
+    animation-duration: 1s, 1.5s;
+    animation-delay: 4s, 0s;
+    animation-iteration-count: 1, infinite;
+    color: rgb(255, 255, 255, 1);
+    background: rgba(254,150,255, 1);
+}
+
+@media only screen and (min-width: 1200px) {
+    .landingHeader {
+        font-size: 5rem;
+    }
+    .landingParagraph {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .landingHeader {
+        font-size: 3rem;
+    }
+
+    .landingCTO {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and ( max-width: 570px ),
+       only screen and (max-height: 600px) {
+    .landingHeader {
+        margin-top: 10vh;
+        font-size: 2rem;
+    }
+
+    .landingParagraph {
+        font-size: 1.5rem;
+    }
+
+    .landingCTO {
+        font-size: 1.5rem;
+        left: 30vw;
+    }
+}
+
+@media only screen and (max-width: 281px) {
+    .landingCTO {
+        left: 20vw;
+    }
+}
+
+@keyframes whitePulse {
+    0% {
+        box-shadow: 0px 0px 7px 4px #ffffff;
+    }
+
+    50% {
+        box-shadow: 0px 0px 35px 25px #ffffff;
+    }
+
+    100% {
+        box-shadow: 0px 0px 7px 4px #ffffff;
+    }
+}
+
+
+@keyframes headerIn {
+    100% {
+        margin: 8vh 0 1vh 0;
+        text-shadow: 0 0 6px #ff70e0;
+        color: rgb(255, 255, 255, 1);
+    }
+}
+
+@keyframes pIn {
+    100% {
+        margin: 0;
+        color: rgb(240, 124, 241, 1);
+        text-shadow: 0 0 3px #000000;
+    }
+}
+
+@keyframes CTOIn {
+    100% {
+        color: rgb(255, 255, 255, 1);
+        background: rgba(254,150,255, 1);
+        box-shadow: 0px 0px 7px 4px #ffffff;
+    }
+}
