@@ -12,7 +12,6 @@ const Navigation = ( props ) => {
       <nav className="navigation-menu">
           <Link to="/" className="link" onClick={() => setOpen(!open)} > Home </Link>
           <Link to="/About" className="link" onClick={() => setOpen(!open)} > About </Link>
-          <Link to="/Projects" className="link" onClick={() => setOpen(!open)} > Projects </Link>
           <Link to="/Contact" className="link" onClick={() => setOpen(!open)} > Contact </Link>
       </nav>
     )

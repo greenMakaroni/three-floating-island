@@ -1,11 +1,11 @@
 import React, { useState, Suspense, useEffect } from 'react'
 import { Canvas, useFrame, useThree} from "@react-three/fiber";
 import { Html, useProgress, OrbitControls, GizmoHelper, GizmoViewport  } from '@react-three/drei';
-import Island from "./Island.jsx";
+import Island from "../../components/Island";
 import "./landing.css";
 
 
-const LandingPage = () => {
+const Landing = () => {
 
   const [isSceneLoaded, setLoaded]  = useState(false);
 
@@ -23,9 +23,9 @@ const LandingPage = () => {
     <div className="App">
       <>
         <div className="text-div">
-          <h1 className="landingHeader unselected"> Dawid Markieton </h1>
-          <p className="landingParagraph unselected"> web development </p>
-          <p className="landingParagraph unselected"> graphic design </p>
+          <h1 className="landingHeader"> Dawid Markieton </h1>
+          <p className="landingParagraph"> web development </p>
+          <p className="landingParagraph"> graphic design </p>
         </div>
         <button className="landingCTO"> How can I help? </button>
       </>
@@ -53,4 +53,4 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default Landing
