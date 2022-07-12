@@ -30,7 +30,7 @@ export default function Island({ setLoaded }) {
       <mesh geometry={nodes.waterlily.geometry} material={materials.bonsai_leaf} position={[-1.95, 3.42, -1.54]} rotation={[-0.06, -0.03, 0.08]} scale={1.19} />
       <mesh castShadow geometry={nodes.bench.geometry} material={materials.platform} position={[-1.24, 3.9, -4.8]} rotation={[-0.18, 0.79, -0.02]} scale={[0.12, 0.1, 0.1]} />
       <mesh castShadow geometry={nodes.pathBottom.geometry} material={materials.platform} position={[7.13, 2.27, -0.51]} rotation={[0.43, 0.85, -0.7]} scale={[1, -0.13, 1]} />
-      <mesh castShadow geometry={nodes.katana.geometry} material={materials.platform} position={[-4.75, 4.84, 3.66]} rotation={[-2.74, 0.15, 2.93]} scale={[0.27, 0.02, 0.27]} />
+      <mesh castShadow geometry={nodes.katana.geometry} material={materials.platform} position={[-4.63, 4.33, 3.46]} rotation={[-2.74, 0.15, 2.93]} scale={[0.17, 0.01, 0.17]} />
       <mesh castShadow geometry={nodes.grass.geometry} material={materials.platform} position={[3.51, 2.51, 4.66]} rotation={[0.11, -0.17, -0.32]} scale={0.3} />
       <mesh castShadow geometry={nodes.lanternBottom.geometry} material={materials.platform} scale={7.42} />
       <mesh castShadow geometry={nodes.bigRocks.geometry} material={materials.platform} position={[4.6, 3.09, 3.63]} />
@@ -39,6 +39,7 @@ export default function Island({ setLoaded }) {
       <mesh receiveShadow geometry={nodes.lanternTop.geometry} material={materials.platform} scale={7.42} />
       <mesh geometry={nodes.candle2.geometry} material={materials.platform} position={[3.34, 4.42, -3.66]} rotation={[-0.2, -0.11, -0.15]} scale={[0.08, 0.16, 0.08]} />
       <mesh geometry={nodes.islandBottom.geometry} material={materials.platform} scale={7.42} />
+      <mesh castShadow geometry={nodes.gate.geometry} material={materials.platform} position={[-1.29, 3.23, 3.71]} rotation={[0.08, 0.05, 0]} scale={[0.44, -0.06, 0.44]} />
     </group>
   )
 }

@@ -20,7 +20,7 @@
 
 .div-hamburger:hover {
     cursor: pointer;
-    animation: infinite whitePulse 1.5s ease-in-out;
+    animation: infinite whitePulse 1.5s;
 }
 
 .hamburger-top {

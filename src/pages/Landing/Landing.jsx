@@ -20,15 +20,15 @@ const Landing = () => {
 
   return (
     
-    <div className="App">
-      <>
-        <div className="text-div">
-          <h1 className="landingHeader"> Dawid Markieton </h1>
-          <p className="landingParagraph"> web development </p>
-          <p className="landingParagraph"> graphic design </p>
-        </div>
-        <button className="landingCTO"> How can I help? </button>
-      </>
+    <div className="App">   
+
+      <div className="text-div">
+        <h1 className="landingHeader"> Dawid Markieton </h1>
+        <p className="landingParagraph"> web development </p>
+        <p className="landingParagraph"> graphic design </p>
+      </div>
+
+      <button className="landingCTO"> How can I help? </button>
       
       <Canvas shadows >
         <Suspense fallback={<Loader />}>
@@ -48,7 +48,6 @@ const Landing = () => {
           <Island />
         </Suspense>
       </Canvas>
-     
     </div>
   )
 }
