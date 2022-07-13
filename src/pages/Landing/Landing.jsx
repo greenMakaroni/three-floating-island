@@ -7,14 +7,11 @@ import "./landing.css";
 
 const Landing = () => {
 
-  const [isSceneLoaded, setLoaded]  = useState(false);
+  const [isSceneLoaded, setLoaded] = useState(false);
 
   function Loader() {
     const { progress } = useProgress();
-    
-    if(progress == 100) {
-      setLoaded(true);
-    }
+  
     return <Html center>{progress} % loaded </Html>
   }
 
@@ -22,13 +19,17 @@ const Landing = () => {
     
     <div className="App">   
 
-      <div className="text-div">
-        <h1 className="landingHeader"> Dawid Markieton </h1>
-        <p className="landingParagraph"> web development </p>
-        <p className="landingParagraph"> graphic design </p>
-      </div>
+      { isSceneLoaded && 
+      <>
+        <div className="text-div">
+          <h1 className="landingHeader"> Dawid Markieton </h1>
+          <p className="landingParagraph"> web development </p>
+          <p className="landingParagraph"> graphic design </p>
+        </div>
 
-      <button className="landingCTO"> How can I help? </button>
+        <button className="landingCTO"> How can I help? </button>
+      </>
+      }
       
       <Canvas shadows >
         <Suspense fallback={<Loader />}>
@@ -45,7 +46,8 @@ const Landing = () => {
             position={ [-25, 35, -12] } 
           />
         
-          <Island />
+          <Island setLoaded={setLoaded}/>
+         
         </Suspense>
       </Canvas>
     </div>
