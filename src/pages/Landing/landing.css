@@ -3,7 +3,6 @@
     z-index: 1;
     margin: 0;
     padding: 7vw;
-    font-size: 4rem;
 }
 
 .landingHeader {
@@ -19,9 +18,14 @@
     animation-fill-mode: forwards;
 }
 
+.landingHeader:hover {
+    cursor: pointer;
+}
+
 .landingParagraph {
     margin: 8vh 0 0 0;
     font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.2em;
     font-size: 3rem;
     color: rgb(240, 124, 241, 0);
     user-select: none;
@@ -30,11 +34,19 @@
     animation-fill-mode: forwards;
 }
 
-.landingCTO {
+.CTOdiv {
+    display: flex;
     position: absolute;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 20vh;
+}
+
+.landingCTO {
     border-style: none;
-    bottom: 15vh;
-    left: 45vw;
     padding: 10px;
     font-family: 'VT323', monospace;
     font-size: 2rem;

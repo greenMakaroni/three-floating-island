@@ -14,7 +14,7 @@ export default function Island({ setLoaded }) {
   const group = useRef()
   const { nodes, materials } = useGLTF('./src/assets/island.glb')
 
-  useFrame((state, delta) => group.current.rotation.y += 0.002)
+  useFrame((state, delta) => group.current.rotation.y += 0.001)
   
   const IslandPos = width > 1100 ? [12, -3, -14] 
   : width > 900 ? [4, -4, -15]

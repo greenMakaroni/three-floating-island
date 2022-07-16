@@ -1,12 +1,12 @@
 import React from 'react'
 
-const About = () => {
+const Resume = () => {
 
   return (
     <div className="App">
-        <p> About </p>
+        <p> Resume </p>
     </div>
   )
 }
 
-export default About
+export default Resume

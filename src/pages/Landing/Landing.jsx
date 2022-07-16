@@ -1,12 +1,15 @@
-import React, { useState, Suspense, useEffect } from 'react'
-import { Canvas, useFrame, useThree} from "@react-three/fiber";
-import { Html, useProgress, OrbitControls, GizmoHelper, GizmoViewport  } from '@react-three/drei';
+import React, { useState, Suspense } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Canvas } from "@react-three/fiber";
+import { Html, useProgress } from '@react-three/drei';
+import FrontCloud from "../../components/FrontCloud"
+import BackCloud from "../../components/BackCloud"
 import Island from "../../components/Island";
 import "./landing.css";
 
 
 const Landing = () => {
-
+  const navigate = useNavigate();
   const [isSceneLoaded, setLoaded] = useState(false);
 
   function Loader() {
@@ -22,12 +25,12 @@ const Landing = () => {
       { isSceneLoaded && 
       <>
         <div className="text-div">
-          <h1 className="landingHeader"> Dawid Markieton </h1>
-          <p className="landingParagraph"> web development </p>
-          <p className="landingParagraph"> graphic design </p>
+          <h1 className="landingHeader" onClick={() => navigate('/about')}> Dawid Markieton </h1>
+          <p className="landingParagraph"> Software Engineer </p>
         </div>
-
-        <button className="landingCTO"> How can I help? </button>
+        <div className="CTOdiv">
+          <button className="landingCTO"> How can I help? </button>
+        </div>
       </>
       }
       
@@ -41,11 +44,12 @@ const Landing = () => {
             castShadow 
             shadow-mapSize-height={ 2048 }
             shadow-mapSize-width={ 2048 }
-            intensity={0.5}
-            args={["#f7d497"]}
+            intensity={0.5}       
             position={ [-25, 35, -12] } 
           />
-        
+
+          <BackCloud />
+          <FrontCloud />
           <Island setLoaded={setLoaded}/>
          
         </Suspense>
