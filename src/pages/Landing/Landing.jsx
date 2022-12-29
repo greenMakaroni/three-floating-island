@@ -1,10 +1,10 @@
-import { useState, useEffect, Suspense } from 'react'
+import { useState, Suspense } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Canvas } from "@react-three/fiber";
 import { Html, useProgress } from '@react-three/drei';
-import FrontCloud from "../../components/FrontCloud"
-import BackCloud from "../../components/BackCloud"
-import Island from "../../components/Island";
+import FrontCloud from "./FrontCloud"
+import BackCloud from "./BackCloud"
+import Island from "./Island";
 import "./landing.css";
 import {
   EffectComposer,
@@ -23,7 +23,6 @@ const Landing = () => {
   }
 
   return (
-
       <div className="App">   
         { isSceneLoaded && 
         <>
@@ -32,7 +31,7 @@ const Landing = () => {
             <p className="landingParagraph"> Software Warrior </p>
           </div>
           <div className="CTOdiv">
-            <button className="landingCTO"> ABOUT ME </button>
+            <button className="landingCTO" onClick={() => navigate('./resume')}> ABOUT ME </button>
           </div>
         </>
         }
@@ -73,7 +72,6 @@ const Landing = () => {
         </Suspense>
       </Canvas>
     </div>
-
   )
 }
 

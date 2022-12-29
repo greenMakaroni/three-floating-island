@@ -47,7 +47,7 @@
 
 .landingCTO {
     border-style: none;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     font-family: 'VT323', monospace;
     font-size: 1.5rem;
     color: rgb(255, 255, 255, 0);
@@ -124,8 +124,8 @@
 @keyframes pIn {
     100% {
         margin: 0;
-        color: rgb(240, 124, 241, 1);
-        text-shadow: 2px 2px 3px #000000;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 3px #fc2fcf;
     }
 }
 
