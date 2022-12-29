@@ -78,7 +78,7 @@
     align-items: center;
     top: 0;
     right: 0;
-    width: 40%;
+    width: 50%;
     height: 100%;
     background: rgba(0,206,255, 0.8);
     animation: menuAppear ease 0.3s;
@@ -149,7 +149,7 @@
         height: 0;
     }
     100% {
-        width: 40%;
+        width: 50%;
         height: 100%;
     }
 }

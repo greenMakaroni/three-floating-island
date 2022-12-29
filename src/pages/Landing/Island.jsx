@@ -5,12 +5,13 @@ import { useRef, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import useWindowDimensions from '../../useWindowDimensions';
+import islandUrl from './island.glb'
 
 export default function Island({ setLoaded }) {
 
   const { height, width } = useWindowDimensions();
   const group = useRef()
-  const { nodes, materials } = useGLTF('./src/assets/island.glb')
+  const { nodes, materials } = useGLTF(islandUrl)
 
   useFrame((state, delta) => group.current.rotation.y += 0.002)
   

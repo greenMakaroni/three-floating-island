@@ -2,16 +2,20 @@ import { useState, Suspense } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Canvas } from "@react-three/fiber";
 import { Html, useProgress } from '@react-three/drei';
+// models
 import FrontCloud from "./FrontCloud"
 import BackCloud from "./BackCloud"
 import Island from "./Island";
-import "./landing.css";
+// navigation
+import Navigation from "../../components/Navigation/Navigation.jsx"
+// postprocessing
 import {
   EffectComposer,
   DepthOfField,
   Bloom
 } from "@react-three/postprocessing";
-
+// css
+import "./landing.css";
 
 const Landing = () => {
   const navigate = useNavigate();
@@ -26,6 +30,7 @@ const Landing = () => {
       <div className="App">   
         { isSceneLoaded && 
         <>
+          <Navigation />
           <div className="text-div">
             <h1 className="landingHeader" onClick={() => navigate('/resume')}> Dawid Markieton </h1>
             <p className="landingParagraph"> Software Warrior </p>
@@ -45,8 +50,8 @@ const Landing = () => {
           <pointLight
             castShadow 
             color={"#ffd9d6"}
-            shadow-mapSize-height={ 1024 }
-            shadow-mapSize-width={ 1024 }
+            shadow-mapSize-height={ 512 }
+            shadow-mapSize-width={ 512 }
             intensity={0.5}       
             position={ [-25, 35, -12] } 
           />
