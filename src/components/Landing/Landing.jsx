@@ -15,10 +15,12 @@ import {
 } from "@react-three/postprocessing";
 // css
 
+import "./loader.css"
+
 const Landing = () => {
   function Loader() {
     const { progress } = useProgress();
-    return <Html center>{progress} % loaded </Html>
+    return <Html center className="progress"> { Math.round(progress) }% </Html>
   }
 
   return ( 
