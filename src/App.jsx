@@ -6,14 +6,12 @@ function App() {
 
   return (
       <BrowserRouter>
-
         <Navigation />
- 
         <Routes>
           <Route exact path="/" element={ <Landing /> } />
-          <Route exact path="/Resume" element={ <Resume /> } />
-          <Route exact path="/Projects" element={ <Projects />} />
-          <Route exact path="/Contact" element={ <Contact /> } />
+          <Route exact path="/resume" element={ <Resume /> } />
+          <Route exact path="/projects" element={ <Projects />} />
+          <Route exact path="/contact" element={ <Contact /> } />
         </Routes>
 
       </BrowserRouter>

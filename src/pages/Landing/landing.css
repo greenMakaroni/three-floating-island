@@ -6,7 +6,7 @@
 }
 
 .landingHeader {
-    margin: 15vh 0 1vh 0;
+    margin: 15vh 0 0 0;
     font-family: 'Parisienne', cursive;
     font-weight: bolder;
     color: rgb(255, 255, 255, 0);
@@ -23,10 +23,10 @@
 }
 
 .landingParagraph {
-    margin: 8vh 0 0 0;
+    margin: 4vh 0 0 0;
     font-family: 'Nunito', sans-serif;
-    letter-spacing: 0.2em;
-    font-size: 3rem;
+    letter-spacing: 0.05em;
+    font-size: 2rem;
     color: rgb(240, 124, 241, 0);
     user-select: none;
     animation: pIn 1s;
@@ -49,7 +49,7 @@
     border-style: none;
     padding: 10px;
     font-family: 'VT323', monospace;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgb(255, 255, 255, 0);
     border-radius: 0 20px 0 20px;
     background: rgba(254,150,255, 0);
@@ -76,7 +76,7 @@
         font-size: 5rem;
     }
     .landingParagraph {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -98,7 +98,7 @@
     }
 
     .landingParagraph {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .landingCTO {
@@ -140,7 +140,7 @@
     100% {
         margin: 0;
         color: rgb(240, 124, 241, 1);
-        text-shadow: 0 0 3px #000000;
+        text-shadow: 0 0 5px #000000;
     }
 }
 
