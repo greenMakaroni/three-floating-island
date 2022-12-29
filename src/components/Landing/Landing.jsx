@@ -1,5 +1,4 @@
-import { useState, Suspense } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { Html, useProgress } from '@react-three/drei';
 // models
@@ -7,7 +6,7 @@ import FrontCloud from "./FrontCloud"
 import BackCloud from "./BackCloud"
 import Island from "./Island";
 // navigation
-import Navigation from "../../components/Navigation/Navigation.jsx"
+import Navigation from "../Navigation/Navigation.jsx"
 // postprocessing
 import {
   EffectComposer,
@@ -15,32 +14,16 @@ import {
   Bloom
 } from "@react-three/postprocessing";
 // css
-import "./landing.css";
 
 const Landing = () => {
-  const navigate = useNavigate();
-  const [isSceneLoaded, setLoaded] = useState(false);
-
   function Loader() {
     const { progress } = useProgress();
     return <Html center>{progress} % loaded </Html>
   }
 
-  return (
-      <div className="App">   
-        { isSceneLoaded && 
-        <>
-          <Navigation />
-          <div className="text-div">
-            <h1 className="landingHeader" onClick={() => navigate('/resume')}> Dawid Markieton </h1>
-            <p className="landingParagraph"> Software Warrior </p>
-          </div>
-          <div className="CTOdiv">
-            <button className="landingCTO" onClick={() => navigate('./resume')}> ABOUT ME </button>
-          </div>
-        </>
-        }
-      
+  return ( 
+    <div className="App">
+      <Navigation />
       <Canvas shadows>
         <Suspense fallback={<Loader />}>
           <color attach="background" args={ ["#A1EAFB"] } />
@@ -50,8 +33,8 @@ const Landing = () => {
           <pointLight
             castShadow 
             color={"#ffd9d6"}
-            shadow-mapSize-height={ 512 }
-            shadow-mapSize-width={ 512 }
+            shadow-mapSize-height={ 1024 }
+            shadow-mapSize-width={ 1024 }
             intensity={0.5}       
             position={ [-25, 35, -12] } 
           />
@@ -59,7 +42,7 @@ const Landing = () => {
           {/* Models */}
           <BackCloud />
           <FrontCloud />
-          <Island setLoaded={setLoaded}/>
+          <Island />
 
           {/* Postprocessing */}
           <EffectComposer multisampling={0} disableNormalPass={false}>
@@ -69,8 +52,8 @@ const Landing = () => {
               bokehScale={0.9}
             />
             <Bloom
-              luminanceThreshold={0.6}
-              luminanceSmoothing={0.9}
+              luminanceThreshold={0.7}
+              luminanceSmoothing={0.2}
               intensity={5}
             />
           </EffectComposer>

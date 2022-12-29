@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom';
-
 import "./navigation.css";
 
 const Navigation = () => {
@@ -10,10 +8,8 @@ const Navigation = () => {
   const NavigationMenu = () => {
     return (
       <nav className="navigation-menu">
-          <Link to="/" className="link" onClick={() => setOpen(!open)} > Home </Link>
-          <Link to="/resume" className="link" onClick={() => setOpen(!open)} > Resume </Link>
-          <Link to="/projects" className="link" onClick={() => setOpen(!open)} > Projects </Link>
-          <Link to="/contact" className="link" onClick={() => setOpen(!open)} > Contact </Link>
+          <a className="link" target="new" href="https://www.linkedin.com/in/dawid-markieton-1948391b8/"> Connect with me on LinkedIn </a>
+          <a className="link" target="new" href="https://github.com/greenMakaroni"> Follow me on GitHub </a>
       </nav>
     )
   }
@@ -25,7 +21,6 @@ const Navigation = () => {
             <div className={ open ? "middle-close" : "hamburger-middle" }></div>
             <div className={ open ? "bottom-close" : "hamburger-bottom" }></div>
         </div>
-
         { open && <NavigationMenu /> }
     </>
 

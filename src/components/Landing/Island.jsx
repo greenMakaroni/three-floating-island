@@ -7,7 +7,7 @@ import { useFrame } from '@react-three/fiber'
 import useWindowDimensions from '../../useWindowDimensions';
 import islandUrl from './island.glb'
 
-export default function Island({ setLoaded }) {
+export default function Island() {
 
   const { height, width } = useWindowDimensions();
   const group = useRef()
@@ -16,15 +16,10 @@ export default function Island({ setLoaded }) {
   useFrame((state, delta) => group.current.rotation.y += 0.002)
   
   const IslandPos = width > 1100 ? [12, -3, -14] 
-  : width > 900 ? [4, -4, -15]
+  : width > 900 ? [2, -4, -15]
   : width > 350 ? [2, -6, -16]
   : [0, -8, -20]
 
-  useEffect(() => {
-    setLoaded(true);
-    return () => setLoaded(false);
-  }, [])
-  
   return (
     <group ref={ group } dispose={ null } position={ IslandPos } rotation={ [0.17, 1.5, 0] }>
       <mesh castShadow geometry={nodes.trunk.geometry} material={materials.trunk} position={[0, 3.51, 1.18]} />

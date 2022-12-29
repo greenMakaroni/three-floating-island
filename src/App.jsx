@@ -1,6 +1,4 @@
-import { useState } from 'react';
-import { Landing, Resume, Projects, Contact } from './pages'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Landing from './components/Landing/Landing.jsx'
 
 // firebase
 import { initializeApp } from "firebase/app";
@@ -23,14 +21,7 @@ const analytics = getAnalytics(app);
 function App() {
 
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={ <Landing /> } />
-          <Route exact path="/resume" element={ <Resume /> } />
-          <Route exact path="/projects" element={ <Projects />} />
-          <Route exact path="/contact" element={ <Contact /> } />
-        </Routes>
-      </BrowserRouter>
+     <Landing />
   )
 }
 
