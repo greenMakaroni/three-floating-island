@@ -12,33 +12,33 @@
     top: 2.5vh;
     width: 50px;
     height: 50px;
-    background: rgba(254,150,255,1);
-    box-shadow: 0px 0px 7px 4px #ffffff;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 7px 4px #fc2fcf;
     border-radius: 50%;
     z-index: 5;
 }
 
 .div-hamburger:hover {
     cursor: pointer;
-    animation: infinite whitePulse 1.5s;
+    animation: infinite pinkPulse 1s;
 }
 
 .hamburger-top {
-    background-color: rgb(255, 255, 255);
+    background-color: #fc2fcf;
     width: 55%;
     height: 4%;  
     margin-bottom: 12%;
 }
 
 .hamburger-middle {
-    background-color: rgb(255, 255, 255);
+    background-color: #fc2fcf;
     width: 55%;
     height: 4%;
     margin-bottom: 12%;
 }
 
 .hamburger-bottom {
-    background-color: rgb(255, 255, 255);
+    background-color: #fc2fcf;
     width: 55%;
     height: 4%;
 }
@@ -46,7 +46,7 @@
 .top-close {
     position: absolute;
     align-self: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #fc2fcf;
     width: 55%;
     height: 10%; 
     animation: hamburger-close-top ease 0.2s;
@@ -56,7 +56,7 @@
 .bottom-close {
     position: absolute;
     align-self: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #fc2fcf;
     width: 55%;
     height: 10%; 
     animation: hamburger-close-bottom ease 0.2s;
@@ -118,17 +118,17 @@
 }
 
 /************** Animations ****************/
-@keyframes whitePulse {
+@keyframes pinkPulse {
     0% {
-        box-shadow: 0px 0px 7px 4px #ffffff;
+        box-shadow: 0px 0px 7px 4px #fc2fcf;
     }
 
     50% {
-        box-shadow: 0px 0px 20px 15px #ffffff;
+        box-shadow: 0px 0px 20px 15px #fc2fcf;
     }
 
     100% {
-        box-shadow: 0px 0px 7px 4px #ffffff;
+        box-shadow: 0px 0px 7px 4px #fc2fcf;
     }
 }
 

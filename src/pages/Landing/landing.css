@@ -14,7 +14,7 @@
     transition: 0.1s;
     font-size: 4rem;
     animation: headerIn 1s;
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
@@ -30,7 +30,7 @@
     color: rgb(240, 124, 241, 0);
     user-select: none;
     animation: pIn 1s;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -57,14 +57,14 @@
     user-select: none;
     animation-name: CTOIn;
     animation-duration: 1s;
-    animation-delay: 3s;
+    animation-delay: 2.5s;
     animation-fill-mode: forwards;
 }
 
 .landingCTO:hover {
     cursor: pointer;
-    animation-name: CTOIn, whitePulse;
-    animation-duration: 1s, 1.5s;
+    animation-name: CTOIn, pinkPulse;
+    animation-duration: 1s, 1s;
     animation-delay: 4s, 0s;
     animation-iteration-count: 1, infinite;
     color: rgb(255, 255, 255, 1);
@@ -113,26 +113,11 @@
     }
 }
 
-@keyframes whitePulse {
-    0% {
-        box-shadow: 0px 0px 7px 4px #ffffff;
-    }
-
-    50% {
-        box-shadow: 0px 0px 35px 25px #ffffff;
-    }
-
-    100% {
-        box-shadow: 0px 0px 7px 4px #ffffff;
-    }
-}
-
-
 @keyframes headerIn {
     100% {
         margin: 8vh 0 1vh 0;
-        text-shadow: 0 0 6px #ff70e0;
-        color: rgb(255, 255, 255, 1);
+        text-shadow: 3px 3px 12px #fc2fcf;
+        color: rgb(255, 255, 255);
     }
 }
 
@@ -140,14 +125,14 @@
     100% {
         margin: 0;
         color: rgb(240, 124, 241, 1);
-        text-shadow: 0 0 5px #000000;
+        text-shadow: 2px 2px 3px #000000;
     }
 }
 
 @keyframes CTOIn {
     100% {
-        color: rgb(255, 255, 255, 1);
-        background: rgba(254,150,255, 1);
-        box-shadow: 0px 0px 7px 4px #ffffff;
+        color: #fc2fcf;
+        background: rgb(255, 255, 255);
+        box-shadow: 0px 0px 7px 4px #fc2fcf;
     }
 }

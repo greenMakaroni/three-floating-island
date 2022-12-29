@@ -45,7 +45,7 @@ const Landing = () => {
           <ambientLight intensity={ 0.17 } />
           <pointLight
             castShadow 
-            color={"#ffd152"}
+            color={"#ffd9d6"}
             shadow-mapSize-height={ 1024 }
             shadow-mapSize-width={ 1024 }
             intensity={0.5}       
