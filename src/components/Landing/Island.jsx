@@ -13,13 +13,13 @@ export default function Island() {
   const group = useRef()
   const { nodes, materials } = useGLTF(islandUrl)
 
-  useFrame((state, delta) => group.current.rotation.y += 0.003)
+  useFrame((state, delta) => group.current.rotation.y += 0.002)
   
   const IslandPos = width > 1100 ? [12, -3, -14] 
   : width > 900 ? [2, -4, -15]
   : width > 350 ? [2, -6, -16]
   : [0, -8, -20]
-
+  
   return (
     <group ref={ group } dispose={ null } position={ IslandPos } rotation={ [0.17, 1.5, 0] }>
       <mesh castShadow geometry={nodes.trunk.geometry} material={materials.trunk} position={[0, 3.51, 1.18]} />

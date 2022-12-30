@@ -1,3 +1,11 @@
+.navPar {
+    margin-bottom: 20vh;
+    font-size: 40px;
+    font-family: 'Parisienne', cursive;
+    z-index: 4;
+    color: #ffffff;
+}
+
 .unselectable {
     user-select: none;
 }

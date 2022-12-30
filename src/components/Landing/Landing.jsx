@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { Canvas } from "@react-three/fiber";
 import { Html, useProgress } from '@react-three/drei';
 // models
@@ -13,19 +13,32 @@ import {
   DepthOfField,
   Bloom
 } from "@react-three/postprocessing";
-// css
 
+// css
 import "./loader.css"
 
+const LoadingTransition = () => {
+  return(
+    <div className="loader_bg">
+      <p className="progress_transition"> 100% </p>
+    </div>
+  )
+}
+
 const Landing = () => {
+  const [ isLoaded, setLoaded ] = useState(false);
   function Loader() {
     const { progress } = useProgress();
+    progress > 99 && setLoaded(true);
+
     return <Html center className="progress"> { Math.round(progress) }% </Html>
   }
 
   return ( 
     <div className="App">
       <Navigation />
+      { isLoaded && <LoadingTransition /> }
+      
       <Canvas shadows>
         <Suspense fallback={<Loader />}>
           <color attach="background" args={ ["#A1EAFB"] } />

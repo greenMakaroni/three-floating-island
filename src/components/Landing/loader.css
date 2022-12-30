@@ -4,3 +4,41 @@
     font-weight: 600;
     color: #fc2fcf;
 }
+
+.progress_transition {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fc2fcf;
+    animation: fadeOut ease-out 1s forwards;    
+}
+
+.loader_bg {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #A1EAFB;
+    animation: loaderTransition ease-out 2s forwards;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes loaderTransition {
+    0% {
+        height: 100vh;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

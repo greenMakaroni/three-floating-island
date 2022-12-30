@@ -8,6 +8,7 @@ const Navigation = () => {
   const NavigationMenu = () => {
     return (
       <nav className="navigation-menu">
+          <p className="navPar"> Dawid Markieton </p>
           <a className="link" target="new" href="https://github.com/greenMakaroni/three-floating-island.git"> LinkedIn </a>
           <a className="link" target="new" href="https://github.com/greenMakaroni"> Github </a>
       </nav>
