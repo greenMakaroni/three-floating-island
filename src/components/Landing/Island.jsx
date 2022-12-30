@@ -13,7 +13,7 @@ export default function Island() {
   const group = useRef()
   const { nodes, materials } = useGLTF(islandUrl)
 
-  useFrame((state, delta) => group.current.rotation.y += 0.002)
+  useFrame((state, delta) => group.current.rotation.y += 0.003)
   
   const IslandPos = width > 1100 ? [12, -3, -14] 
   : width > 900 ? [2, -4, -15]

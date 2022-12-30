@@ -48,16 +48,17 @@ const Landing = () => {
 
           {/* Postprocessing */}
           <EffectComposer multisampling={0} disableNormalPass={false}>
-            <DepthOfField
-              focusDistance={0}
-              focalLength={0}
-              bokehScale={0.9}
-            />
-            <Bloom
+          <Bloom
               luminanceThreshold={0.7}
               luminanceSmoothing={0.2}
               intensity={5}
             />
+            <DepthOfField
+              focusDistance={2}
+              focalLength={0.1}
+              bokehScale={0.8}
+            />
+
           </EffectComposer>
         </Suspense>
       </Canvas>

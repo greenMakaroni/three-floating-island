@@ -8,8 +8,8 @@ const Navigation = () => {
   const NavigationMenu = () => {
     return (
       <nav className="navigation-menu">
-          <a className="link" target="new" href="https://www.linkedin.com/in/dawid-markieton-1948391b8/"> Connect with me on LinkedIn </a>
-          <a className="link" target="new" href="https://github.com/greenMakaroni"> Follow me on GitHub </a>
+          <a className="link" target="new" href="https://github.com/greenMakaroni/three-floating-island.git"> LinkedIn </a>
+          <a className="link" target="new" href="https://github.com/greenMakaroni"> Github </a>
       </nav>
     )
   }
